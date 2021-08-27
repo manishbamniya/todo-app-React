@@ -1,0 +1,37 @@
+.rootDiv {
+  width: 50%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: hsl(340, 60%, 50%);
+  text-align: center;
+  margin: 1rem 0 0 0;
+  border-radius: 5px ;
+}
+
+.rootDiv h1{
+  text-transform: uppercase;
+  padding: 1rem 0 0 0 ;
+  color: white;
+  letter-spacing: 1px;
+}
+
+form{
+    width: 100%;
+    padding: 2rem;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.rootDiv input{
+    width: 100%;
+    height:50px;
+    border: none;
+    border-radius: 5px;
+    margin:0 0 1rem 0 ;
+    padding: 1rem;
+    outline: none;
+    font-size: 24px;
+    color: black;
+    font-weight: 600;
+}
