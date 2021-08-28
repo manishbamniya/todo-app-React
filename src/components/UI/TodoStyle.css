@@ -1,0 +1,21 @@
+.item-enter {
+  opacity: 0;
+  transform: scale3d(0,0,0);
+}
+.item-enter-active {
+  opacity: 1;
+  transform: scale3d(1,1,1);
+  transition: all 500ms ease-in;
+}
+.item-exit {
+  opacity: 1;
+  width: 100%;
+  text-decoration: line-through;
+  transform: rotate(10deg);
+  transform-origin: center left;
+}
+.item-exit-active {
+  opacity: 0;
+  transform: rotate(30deg);
+  transition: all 500ms ease-in;
+}

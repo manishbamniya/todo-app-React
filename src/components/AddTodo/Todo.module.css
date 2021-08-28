@@ -1,0 +1,18 @@
+.commonDiv {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icons {
+  opacity: 0;
+  transition: all 0.3s ease-in;
+  width: 0%;
+}
+
+.commonDiv:hover > .icons {
+  opacity: 1;
+  width: 15%;
+}
+
+

@@ -7,28 +7,11 @@
   font-size: larger;
   font-weight: 600;
   text-transform: uppercase;
-  color: white;
-  background-color: hsl(87, 50%, 50%);
-}
-
-.delete {
-  width: 140px;
-  height: 40px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: larger;
-  font-weight: 600;
-  text-transform: uppercase;
-  background-color: rgb(214, 80, 62);
-  color: white;
-}
-
-.delete:hover{
-  background-color: rgb(190, 80, 62);
+  color: black;
+  background-color: hsl(125, 94%, 43%);
 }
 
 .btn:hover{
-  background-color: hsl(77, 50%, 40%);
+  background-color: hsl(125, 74%, 60%);
 
 }

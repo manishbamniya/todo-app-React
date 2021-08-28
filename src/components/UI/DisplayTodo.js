@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import AddTodo from "../AddTodo/AddTodo";
 import classes from "./DisplayTodo.module.css";
-import Button from "../Button/Button";
+import Todo from "../AddTodo/Todo";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
+import "./TodoStyle.css";
 
 const DisplayTodo = () => {
   const [todoItem, setTodoItem] = useState([]);
 
   const todoAddHandler = (todo) => {
+    if (todo.length > 0) {
       setTodoItem((prevTodo) => {
         return [...prevTodo, { todo: todo, id: Math.random() }];
       });
+    }
   };
 
   const handleDeleteTodo = (id) => {
@@ -20,29 +24,20 @@ const DisplayTodo = () => {
   };
 
   return (
-    <div>
-      <div>
-        <AddTodo onAddTodo={todoAddHandler} />
-      </div>
-      <div className={classes.displayTodoContainer}>
-        <ul>
-          {Array.isArray(todoItem) && todoItem.length > 0
-            ? todoItem.map((todoItem) => (
-                <div key={todoItem.id} className={classes.todoWrapper}>
-                  <li>{todoItem.todo}</li>
-                  <Button
-                    color="red"
-                    onDeleteTodo={handleDeleteTodo}
-                    id={todoItem.id}
-                  >
-                    Delete
-                  </Button>
-                </div>
-              ))
-            : null}
+    <>
+      <AddTodo onAddTodo={todoAddHandler} />
+        <ul className={classes.displayTodoContainer}>
+          <TransitionGroup>
+            {todoItem.map(({ todo, id }) => (
+              <CSSTransition key={id} timeout={500} classNames="item">
+                <Todo onDelete={handleDeleteTodo} id={id}>
+                  {todo}
+                </Todo>
+              </CSSTransition>
+            ))}
+          </TransitionGroup>
         </ul>
-      </div>
-    </div>
+    </>
   );
 };
 export default DisplayTodo;
