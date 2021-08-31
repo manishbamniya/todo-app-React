@@ -8,18 +8,14 @@ const Icons = (props) => {
     return props.onDelete(props.id);
   };
 
+
   return (
     <div className={classes.iconsMainDiv}>
       <span>
-        <DeleteIcon
-          fontSize="large"
-          onClick={handleDelteTodo}
-        />
+        <DeleteIcon fontSize="large" onClick={handleDelteTodo} />
       </span>
       <span>
-        <DoneIcon 
-          fontSize="large"
-          onClick={handleDelteTodo} />
+        <DoneIcon fontSize="large" onClick={handleDelteTodo} />
       </span>
     </div>
   );

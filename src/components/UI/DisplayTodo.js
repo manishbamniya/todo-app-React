@@ -24,12 +24,12 @@ const DisplayTodo = () => {
   };
 
   return (
-    <>
+    <div className={classes.root}>
       <AddTodo onAddTodo={todoAddHandler} />
         <ul className={classes.displayTodoContainer}>
           <TransitionGroup>
             {todoItem.map(({ todo, id }) => (
-              <CSSTransition key={id} timeout={500} classNames="item">
+              <CSSTransition key={id} timeout={700} classNames="item">
                 <Todo onDelete={handleDeleteTodo} id={id}>
                   {todo}
                 </Todo>
@@ -37,7 +37,7 @@ const DisplayTodo = () => {
             ))}
           </TransitionGroup>
         </ul>
-    </>
+    </div>
   );
 };
 export default DisplayTodo;

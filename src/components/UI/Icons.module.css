@@ -1,21 +1,21 @@
-.iconsMainDiv{
-    display: flex;
-    justify-content: flex-end;
+.iconsMainDiv {
+  display: flex;
+  justify-content: flex-end;
 }
 
-.iconsMainDiv span{
-    margin: 0 0 .5rem .5rem;
+.iconsMainDiv span {
+  margin: 0 0 0.5rem 0.5rem;
 }
 
-.iconsMainDiv span:hover{
-    transform: scale3d(1.2,1.2,1.2);
-    transition: transform .2s ease-in;
-    cursor: pointer;
+.iconsMainDiv span:hover {
+  transform: scale3d(1.2, 1.2, 1.2);
+  transition: transform 0.2s ease-in;
+  cursor: pointer;
 }
 
-.iconsMainDiv span:nth-child(1):hover{
-    color:rgba(228, 34, 34, 0.986)
+.iconsMainDiv span:nth-child(1):hover {
+  color: rgba(228, 34, 34, 0.986);
 }
-.iconsMainDiv span:nth-child(2):hover{
-    color:white
+.iconsMainDiv span:nth-child(2):hover {
+  color: rgb(27, 231, 20);
 }

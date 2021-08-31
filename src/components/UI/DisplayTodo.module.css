@@ -1,3 +1,7 @@
+.root{
+  margin-top: 50px;
+}
+
 .displayTodoContainer {
   width: 50%;
   position: relative;
